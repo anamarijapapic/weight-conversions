@@ -4,7 +4,8 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/anamarijapapic/weight-conversions/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/anamarijapapic/weight-conversions/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/anamarijapapic/weight-conversions.svg?style=flat-square)](https://packagist.org/packages/anamarijapapic/weight-conversions)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Weight conversions in PHP.  
+*([Spatie Laravel Package Training v2.0](https://laravelpackage.training/) - Creating a PHP package)*
 
 ## Installation
 
@@ -17,8 +18,13 @@ composer require anamarijapapic/weight-conversions
 ## Usage
 
 ```php
-$skeleton = new AnamarijaPapic\WeightConversions();
-echo $skeleton->echoPhrase('Hello, AnamarijaPapic!');
+use AnamarijaPapic\WeightConversions\Weight;
+
+$pounds = Weight::kilograms(100)->toPounds();
+
+$stones = Weight::kilograms(100)->toStones();
+
+echo "100 kg = $pounds lb = $stones st";
 ```
 
 ## Testing
